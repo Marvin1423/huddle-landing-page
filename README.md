@@ -28,6 +28,11 @@ Users should be able to:
 ![](./src/images/screenshots/Landing-page-final-design-hover-button-socials.png)
 ![](./src/images/screenshots/Landing-page-mobile-final-design.png)
 
+### Links
+
+- Solution URL: (https://www.frontendmentor.io/solutions/huddle-landing-page-only-with-flexbox-xXztpfZViB)
+- Live Site URL: (https://marvin1423.github.io/huddle-landing-page/)
+
 ## My process
 
 ### Built with
