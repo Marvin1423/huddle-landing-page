@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+body{
+    font-family: 'Open Sans', sans-serif;
+    background-image: url(../images/bg-desktop.svg);
+    background-size: cover;
+    background-position:center ;
+    background-repeat: no-repeat;
+    background-color: hsl(257, 40%, 49%);
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.wrapper {
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 0;
+    margin: 0 50px;
+}
+
+.container .logo img {
+    width: 200px;
+    margin-bottom: 10px;
+}
+
+main {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+}
+
+main img {
+    width: 100%;
+}
+
+main .landing-image {
+    max-width: 600px;
+}
+
+main .landing-text h1{
+    color: #fff;
+    line-height: 1.5;
+    font-size: 35px;
+    font-family: 'Poppins', sans-serif;
+    max-width: 420px;
+    margin-bottom: 25px;
+}
+
+main .landing-text p {
+    color: #efefef;
+    max-width: 480px;
+    font-size: 17px;
+    margin-bottom: 40px;
+}
+
+main .landing-text a {
+    background-color: #fff;
+    color: hsl(257, 40%, 49%);
+    padding: 15px 60px;
+    border-radius: 35px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    transition: 0.2s ease-in-out;
+}
+
+main .landing-text a:hover{
+    background-color: hsl(300, 69%, 71%);
+    color: #fff;
+}
+
+.container .social {
+    display: flex;
+    justify-content: flex-end;
+    margin: 5px;
+    gap: 15px;
+}
+
+.container .social a {
+    width: 18px;
+    height: 18px;
+    color: #fff;
+    border: solid #fff 1px;
+    padding: 5px;
+    border-radius: 50%;
+    text-align: center;
+    transition: 0.1s ease-in-out;
+}
+
+.container .social a:hover{
+    color: hsl(300, 69%, 71%);
+    border: solid hsl(300, 69%, 71%) 1px;
+}
+
+@media (max-width: 950px){
+    main .landing-text h1{
+        font-size: 28px;
+        max-width: 550px;
+    }
+
+    main .landing-text p{
+        max-width: 400px;
+        font-size: 16px;
+    }
+
+    main .landing-text a{
+        padding: 15px 55px;
+    }
+}
+
+@media (max-width: 715px){
+
+    body{
+        background-image: url(../images/bg-mobile.svg);
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    main{
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .container .logo img {
+        width: 150px;
+        margin-bottom: 0;
+    }
+
+    main .landing-image {
+        max-width: 300px;
+        margin-top: 20px;
+    }
+
+    main .landing-text{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    main .landing-text h1{
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    main .landing-text p {
+        font-size: 14px;
+        margin-bottom: 25px;
+    }
+
+    main .landing-text a {
+        padding: 10px 65px;
+        margin-bottom: 10px;
+    }
+
+    .container .social{
+        justify-content: center;
+    }
+
+    .container .social a{
+        height: 17px;
+        width: 17px;
+        padding: 4px;
+    }
+}
