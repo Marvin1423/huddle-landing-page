@@ -16,20 +16,32 @@ body{
     height: 100vh;
     max-width: 1440px;
     margin: 0 auto;
+    overflow: hidden;
 }
 
 .wrapper {
     display: flex;
-    height: 90vh;
+    min-height: 90vh;
     flex-direction: column;
     justify-content: space-between;
     padding: 40px 0;
     margin: 0 50px;
 }
 
+@keyframes slideToCenter{
+    0%{
+        translate: 350px;
+    }
+
+    to{
+        translate: 0;
+    }
+}
+
 .container .logo img {
     width: 200px;
     margin-bottom: 10px;
+    animation: slidefromleft 1.5s;
 }
 
 main {
@@ -38,12 +50,23 @@ main {
     align-items: center;
 }
 
+@keyframes slidefromleft{
+    from{
+        translate: -150px;
+    }
+
+    to{
+        translate: 0;
+    }
+}
+
 main img {
     width: 100%;
 }
 
 main .landing-image {
     max-width: 600px;
+    animation: slidefromleft 2s;
 }
 
 main .landing-text h1{
@@ -53,6 +76,7 @@ main .landing-text h1{
     font-family: 'Poppins', sans-serif;
     max-width: 420px;
     margin-bottom: 25px;
+    animation: slideToCenter 1.2s;
 }
 
 main .landing-text p {
@@ -60,18 +84,43 @@ main .landing-text p {
     max-width: 480px;
     font-size: 17px;
     margin-bottom: 40px;
+    animation: slideToCenter 1.8s;
 }
 
-main .landing-text a {
+@keyframes rotateSlide {
+    0%{
+        transform: rotate(0);
+        translate: 350px;
+    }
+
+    50%{
+        transform: rotate(-440deg);
+        translate: -120px;
+    }
+
+    80%{
+        translate: 160px;
+    }
+
+    100%{
+        transform: rotate(0deg);
+        translate: 0;
+    }
+}
+
+main .landing-text button {
     background-color: #fff;
     color: hsl(257, 40%, 49%);
-    padding: 15px 60px;
+    padding: 1.1rem 4rem;
+    border: none;
     border-radius: 35px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
     transition: 0.2s ease-in-out;
+    cursor: pointer;
+    animation: rotateSlide 1.5s;
 }
 
-main .landing-text a:hover{
+main .landing-text button:hover{
     background-color: hsl(300, 69%, 71%);
     color: #fff;
 }
@@ -83,15 +132,27 @@ main .landing-text a:hover{
     gap: 15px;
 }
 
+.container .social a:nth-child(3){
+    animation: slideToCenter 1.2s;
+}
+
+.container .social a:nth-child(2){
+    animation: slideToCenter 1.5s;
+}
+
 .container .social a {
-    width: 18px;
-    height: 18px;
+    width: 25px;
+    height: 23px;
     color: #fff;
     border: solid #fff 1px;
     padding: 5px;
     border-radius: 50%;
-    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     transition: 0.1s ease-in-out;
+    animation: slideToCenter 1.8s;
+
 }
 
 .container .social a:hover{
@@ -110,7 +171,7 @@ main .landing-text a:hover{
         font-size: 16px;
     }
 
-    main .landing-text a{
+    main .landing-text button{
         padding: 15px 55px;
     }
 }
@@ -126,6 +187,10 @@ main .landing-text a:hover{
     main{
         flex-direction: column;
         gap: 15px;
+    }
+
+    .wrapper{
+        padding: 25px 0;
     }
 
     .container .logo img {
@@ -148,6 +213,7 @@ main .landing-text a:hover{
     main .landing-text h1{
         font-size: 20px;
         margin-bottom: 15px;
+        opacity: 1;
     }
 
     main .landing-text p {
@@ -155,9 +221,8 @@ main .landing-text a:hover{
         margin-bottom: 25px;
     }
 
-    main .landing-text a {
+    main .landing-text button {
         padding: 10px 65px;
-        margin-bottom: 10px;
     }
 
     .container .social{
@@ -165,8 +230,8 @@ main .landing-text a:hover{
     }
 
     .container .social a{
-        height: 17px;
-        width: 17px;
-        padding: 4px;
+        height: 20px;
+        width: 20px;
+        margin-top: 20px;
     }
 }
